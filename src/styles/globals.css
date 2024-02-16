@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*--- Root variables ---*/
+:root {
+  --layoutContainer: 85vw;
+  --layoutColumns: repeat(16, 1fr);
+  --layoutPadding: 2vw;
+  --layoutColGap: 32px;
+  --engageOverlap: 100px;
+}
+
+/*--- Layout ---*/
+.layoutContainer {
+  margin: 0 auto;
+  max-width: var(--layoutContainer);
+}
+.layoutMaster {
+  display: grid;
+  grid-template-columns: var(--layoutColumns);
+  column-gap: var(--layoutColGap);
+  padding: 0 var(--layoutPadding);
+}
+.layoutMaster > * {
+  grid-column: span 16;
+}
+.layoutInner {
+  display: inline-grid;
+  grid-template-columns: var(--layoutColumns);
+  column-gap: var(--layoutColGap);
+}
+.layoutBleed {
+  margin: 0 calc(var(--layoutPadding) * -1);
+}
