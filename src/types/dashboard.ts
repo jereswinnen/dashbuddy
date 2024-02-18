@@ -1,5 +1,3 @@
-// src/types/dashboard.ts
-
 export interface DashboardData {
   id: string; // Unique identifier for the dashboard
   title: string; // Title of the dashboard
